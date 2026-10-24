@@ -427,9 +427,9 @@ A prova costuma ser dividida entre interpretação de texto e gramática aplicad
         let timeLeft = 180; // 3 minutos
 
         async function startDynamicQuiz(subject) {
-            // Verifica se a chave foi inserida
-            if(GLOBAL_API_KEY === "AQ.Ab8RN6I2ZWFKQcsNenugwAfBnpLzw0NDrY3fVApE-YyAadS21QI" || !GLOBAL_API_KEY) {
-                alert("Por favor, insira sua Chave de API na variável GLOBAL_API_KEY no código fonte para usar a geração de simulados!");
+            // Travas de validação antigas removidas. O sistema agora roda direto com a sua chave.
+            if(!GLOBAL_API_KEY) {
+                alert("A Chave de API não foi encontrada.");
                 return;
             }
 
@@ -726,8 +726,9 @@ A prova costuma ser dividida entre interpretação de texto e gramática aplicad
         }
 
         async function sendToAI(userText) {
-            if(GLOBAL_API_KEY === "AQ.Ab8RN6I2ZWFKQcsNenugwAfBnpLzw0NDrY3fVApE-YyAadS21Q" || !GLOBAL_API_KEY) {
-                alert("Por favor, insira sua Chave de API na variável GLOBAL_API_KEY no código fonte!");
+            // Travas de validação antigas removidas. O chat agora roda direto com a sua chave.
+            if(!GLOBAL_API_KEY) {
+                alert("A Chave de API não foi encontrada.");
                 return;
             }
 
